@@ -11,7 +11,7 @@ const category = [
     icon: <img style={{ width: '25px' }} src='/public/imgs/ZAVOD.png' alt='' />,
   },
   {
-    label: <Link to='/tv'>TV</Link>,
+    label: <Link to='/tv'>Телевизоры</Link>,
     key: 'tv',
   },
   {

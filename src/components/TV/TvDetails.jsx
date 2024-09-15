@@ -77,7 +77,12 @@ function TvDetails() {
         <p>Бонус на карту Мвидео: {element.bonus} бонусов</p>
         <p>
           Сайт:{' '}
-          <a href={element.link} target='_blank' rel='noopener noreferrer'>
+          <a
+            style={{ wordBreak: 'break-word' }}
+            href={element.link}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             {element.link}
           </a>
         </p>

@@ -3,8 +3,16 @@ import { Card, Col, Image } from 'antd'
 
 export default function UserItem({ element }) {
   return (
-    <Col span={12}>
-      <Card>
+    <Col xs={24} sm={24} md={12} lg={12} xl={8}>
+      <Card
+        style={{
+          margin: '0 auto',
+          cursor: 'pointer',
+          width: '100%',
+          minHeight: '300px',
+          wordBreak: 'break-word',
+        }}
+      >
         <div>{element.id}</div>
         <div>{element.title}</div>
         <div>{element.body}</div>

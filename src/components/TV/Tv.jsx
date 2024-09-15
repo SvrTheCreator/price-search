@@ -44,7 +44,7 @@ export default function Tv() {
     <div>
       {items.length > 0 ? (
         <div id='tv' style={row}>
-          <Row gutter={[24, 24]}>
+          <Row gutter={[24, 24]} style={{ display: 'flex', flexWrap: 'wrap' }}>
             {items &&
               items.map((element) => (
                 <TvItem key={element.id} element={element} />

@@ -8,20 +8,22 @@ export default function TvItem({ element }) {
   const handleClick = () => {
     navigate(`/tv/${element.id}`) // Переход к деталям элемента
   }
-
+  // style={{ width: '100%' }}
   return (
-    <Col span={12}>
+    <Col xs={24} sm={24} md={12} lg={12} xl={8}>
       <Card
         onClick={handleClick}
         style={{
-          maxWidth: 600,
           margin: '0 auto',
           cursor: 'pointer',
+          width: '100%',
+          minHeight: '300px',
+          wordBreak: 'break-word',
         }}
         title={element.name}
       >
         {/* <div>{element.brandName}</div> */}
-        <p>Модель: {element.name}</p>
+        <p style={{ width: '100%' }}>Модель: {element.name}</p>
         {/* <p>brandName: {element.brandName}</p> */}
         <p>
           Старая цена:{' '}
