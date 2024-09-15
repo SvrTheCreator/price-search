@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { tvData } from '../../store/thunk/tvData/tvData'
 import { Card, Col, Image, Spin } from 'antd'
 import { Content } from 'antd/es/layout/layout'
-import { LoadingOutlined } from '@ant-design/icons'
+import { LoadingOutlined, StarFilled } from '@ant-design/icons'
 
 // const styleCol = {
 //   display: 'flex',
@@ -51,44 +51,122 @@ function TvDetails() {
   if (!element) return <div>Item not found</div>
 
   return (
-    <div
+    <Card
       style={{
-        padding: 24,
-        // minHeight: '100vh',
-        background: '#f0f2f5',
+        margin: '0 auto',
+        width: '50%',
+        wordBreak: 'break-word',
       }}
+      title={element.name}
     >
-      <Card
+      <div
         style={{
-          maxWidth: 600,
-          margin: '0 auto',
+          display: 'flex',
+          alignItems: 'center',
+          // justifyContent: 'center',
+          gap: '10px',
         }}
-        title={element.name}
       >
-        {/* <p>ID: {element.id}</p> */}
-        <p>Модель: {element.name}</p>
-        <p>
-          Старая цена:{' '}
-          <span style={{ textDecoration: 'line-through' }}>
-            {element.base_price} &#x20BD;
-          </span>
-        </p>
-        <p>Новая цена: {element.sale_price} &#x20BD;</p>
-        <p>Бонус на карту Мвидео: {element.bonus} бонусов</p>
-        <p>
-          Сайт:{' '}
-          <a
-            style={{ wordBreak: 'break-word' }}
-            href={element.link}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            {element.link}
-          </a>
-        </p>
-        {/* <Image preview={false} width={200} height={200} src={element.url} /> */}
-      </Card>
-    </div>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            // justifyContent: 'center',
+            gap: '3px',
+          }}
+        >
+          <StarFilled style={{ color: 'red' }} />
+          <span style={{ color: 'red' }}>{element.stars.slice(0, 3)}</span>
+        </div>
+        <span style={{ color: 'grey' }}>{element.count} отзывов</span>
+      </div>
+      <p style={{ width: '100%' }}>Модель: {element.name}</p>
+      <p>
+        Старая цена:{' '}
+        <span style={{ textDecoration: 'line-through' }}>
+          {element.base_price} &#x20BD;
+        </span>
+      </p>
+      <p>Новая цена: {element.sale_price} &#x20BD;</p>
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Image preview={false} src={element.image} />
+      </div>
+      <p>
+        Сайт:{' '}
+        <a
+          style={{ wordBreak: 'break-word' }}
+          href={element.link}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          {element.link}
+        </a>
+      </p>
+    </Card>
+
+    // <div
+    //   style={{
+    //     padding: 24,
+    //     // minHeight: '100vh',
+    //     background: '#f0f2f5',
+    //   }}
+    // >
+    //   <Card
+    //     style={{
+    //       maxWidth: 600,
+    //       margin: '0 auto',
+    //     }}
+    //     title={element.name}
+    //   >
+    //     <div
+    //       style={{
+    //         display: 'flex',
+    //         alignItems: 'center',
+    //         flexDirection: 'column',
+    //         justifyContent: 'center',
+    //         gap: '10px',
+    //       }}
+    //     >
+    //       {/* <p>ID: {element.id}</p> */}
+    //       <p>Модель: {element.name}</p>
+    //       <p>
+    //         Старая цена:{' '}
+    //         <span style={{ textDecoration: 'line-through' }}>
+    //           {element.base_price} &#x20BD;
+    //         </span>
+    //       </p>
+    //       <p>Новая цена: {element.sale_price} &#x20BD;</p>
+    //       <p>Бонус на карту Мвидео: {element.bonus} бонусов</p>
+    //       <p>
+    //         Сайт:{' '}
+    //         <a
+    //           style={{ wordBreak: 'break-word' }}
+    //           href={element.link}
+    //           target='_blank'
+    //           rel='noopener noreferrer'
+    //         >
+    //           {element.link}
+    //         </a>
+    //       </p>
+    //       <Image
+    //         style={{
+    //           display: 'flex',
+    //           alignItems: 'center',
+    //           justifyContent: 'center',
+    //         }}
+    //         preview={false}
+    //         src={element.image}
+    //       />
+    //     </div>
+    //   </Card>
+    // </div>
   )
 }
 

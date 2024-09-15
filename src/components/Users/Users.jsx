@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Spin } from 'antd'
-import { getUsers } from '../../store/usersSlice'
 import UserItem from './UserItem'
 import { LoadingOutlined } from '@ant-design/icons'
 
