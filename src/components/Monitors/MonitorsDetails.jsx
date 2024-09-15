@@ -20,7 +20,7 @@ import { LoadingOutlined, StarFilled } from '@ant-design/icons'
 //   justifyContent: 'center',
 // }
 
-function TvDetails() {
+function MonitorsDetails() {
   const { id } = useParams()
   const dispatch = useDispatch()
   const { items, loading, error } = useSelector((state) => state.tvData)
@@ -170,4 +170,4 @@ function TvDetails() {
   )
 }
 
-export default TvDetails
+export default MonitorsDetails

@@ -2,12 +2,12 @@ import { Layout } from 'antd'
 import React from 'react'
 import AppHeader from './AppHeader'
 import AppContent from './AppContent'
-import Tv from '../TV/Tv'
+import Monitors from '../Monitors/Monitors'
 import AppFooter from './AppFooter'
 import AppAside from './AppAside'
 import { Routes, Route } from 'react-router-dom'
 import Users from '../Users/Users'
-import TvDetails from '../TV/TvDetails'
+import MonitorsDetails from '../Monitors/MonitorsDetails'
 import { Content } from 'antd/es/layout/layout'
 
 const layoutStyle = {
@@ -28,8 +28,8 @@ export default function AppLayout() {
       <Content>
         <Routes style={{ flex: 1, padding: '24px', background: '#f0f2f5' }}>
           <Route path='/' element={<AppContent />} />
-          <Route path='/tv' element={<Tv />} />
-          <Route path='/tv/:id' element={<TvDetails />} />
+          <Route path='/monitors' element={<Monitors />} />
+          <Route path='/monitors/:id' element={<MonitorsDetails />} />
           <Route path='/users' element={<Users />} />
         </Routes>
       </Content>

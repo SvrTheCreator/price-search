@@ -2,8 +2,9 @@ import React from 'react'
 import { Card, Col, Image } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import { StarFilled } from '@ant-design/icons'
+import Monitors from './Monitors'
 
-export default function TvItem({ element }) {
+export default function MonitorsItem({ element }) {
   const navigate = useNavigate()
 
   const handleClick = () => {
@@ -54,7 +55,9 @@ export default function TvItem({ element }) {
           </span>
         </p>
 
-        <p>Новая цена: {element.sale_price} &#x20BD;</p>
+        <p style={{ fontWeight: '700' }}>
+          Новая цена: {element.sale_price} &#x20BD;
+        </p>
         <Image preview={false} src={element.image} />
       </Card>
     </Col>

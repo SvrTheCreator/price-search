@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Spin } from 'antd'
 // import { getTv } from '../../store/tvApiSlice'
-import TvItem from './TvItem'
+import TvItem from './MonitorsItem'
 import { LoadingOutlined } from '@ant-design/icons'
 import Sorting from '../Sorting'
-import { sortTv } from '../../store/thunk/tvData/tvDataSlice'
+
 import { tvData } from '../../store/thunk/tvData/tvData'
 
 const row = {
@@ -16,7 +16,7 @@ const row = {
   width: '100vw',
   textAlign: 'start',
 }
-export default function Tv() {
+export default function Monitors() {
   const dispatch = useDispatch()
   const { items, loading, error } = useSelector((state) => state.tvData)
 

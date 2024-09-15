@@ -1,8 +1,9 @@
 import { Content } from 'antd/es/layout/layout'
 import React from 'react'
-import Tv from '../TV/Tv'
+import Monitors from '../Monitors/Monitors'
 
 import { Routes, Route } from 'react-router-dom'
+// import Monitors from './../TV/Monitors'
 
 const contentStyle = {
   display: 'flex',
