@@ -21,9 +21,15 @@ export default function TvItem({ element }) {
         title={element.name}
       >
         {/* <div>{element.brandName}</div> */}
-        <p>model: {element.name}</p>
-        <p>brandName: {element.brandName}</p>
-        <p>price: {element.base_price}</p>
+        <p>Модель: {element.name}</p>
+        {/* <p>brandName: {element.brandName}</p> */}
+        <p>
+          Старая цена:{' '}
+          <span style={{ textDecoration: 'line-through' }}>
+            {element.base_price} &#x20BD;
+          </span>
+        </p>
+        <p>Новая цена: {element.sale_price} &#x20BD;</p>
         {/* <a>{element.link}</a> */}
         {/* <Image preview={false} width={200} height={200} src={element.url} /> */}
       </Card>

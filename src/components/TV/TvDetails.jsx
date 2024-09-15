@@ -66,11 +66,17 @@ function TvDetails() {
         title={element.name}
       >
         {/* <p>ID: {element.id}</p> */}
-        <p>model: {element.name}</p>
-        <p>brandName: {element.brandName}</p>
-        <p>price: {element.base_price}</p>
+        <p>Модель: {element.name}</p>
         <p>
-          Website:{' '}
+          Старая цена:{' '}
+          <span style={{ textDecoration: 'line-through' }}>
+            {element.base_price} &#x20BD;
+          </span>
+        </p>
+        <p>Новая цена: {element.sale_price} &#x20BD;</p>
+        <p>Бонус на карту Мвидео: {element.bonus} бонусов</p>
+        <p>
+          Сайт:{' '}
           <a href={element.link} target='_blank' rel='noopener noreferrer'>
             {element.link}
           </a>
