@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Col, Image } from 'antd'
+import { Card, Col } from 'antd'
 
 export default function UserItem({ element }) {
   return (

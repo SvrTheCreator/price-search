@@ -8,7 +8,6 @@ export default function TvItem({ element }) {
   const handleClick = () => {
     navigate(`/tv/${element.id}`) // Переход к деталям элемента
   }
-  // style={{ width: '100%' }}
   return (
     <Col xs={24} sm={24} md={12} lg={12} xl={8}>
       <Card

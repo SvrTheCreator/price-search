@@ -8,7 +8,34 @@ const tvDataSlice = createSlice({
     loading: false,
     error: null,
   },
-  reducers: {},
+  reducers: {
+    sortTv(state, action) {
+      if (action.payload.key === 'sale_price-upper') {
+        state.items.sort((a, b) => {
+          // console.log(a.sale_price)
+
+          if (a.sale_price < b.sale_price) {
+            return -1
+          }
+          if (a.sale_price > b.sale_price) {
+            return 1
+          }
+          return 0
+        })
+      }
+      if (action.payload.key === 'sale_price-down') {
+        state.items.sort((a, b) => {
+          if (a.sale_price > b.sale_price) {
+            return -1
+          }
+          if (a.sale_price < b.sale_price) {
+            return 1
+          }
+          return 0
+        })
+      }
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(tvData.pending, (state) => {
@@ -25,5 +52,7 @@ const tvDataSlice = createSlice({
       })
   },
 })
+
+export const { sortTv } = tvDataSlice.actions
 
 export default tvDataSlice.reducer

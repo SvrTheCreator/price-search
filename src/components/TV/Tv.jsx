@@ -4,7 +4,8 @@ import { Row, Spin } from 'antd'
 // import { getTv } from '../../store/tvApiSlice'
 import TvItem from './TvItem'
 import { LoadingOutlined } from '@ant-design/icons'
-
+import Sorting from '../Sorting'
+import { sortTv } from '../../store/thunk/tvData/tvDataSlice'
 import { tvData } from '../../store/thunk/tvData/tvData'
 
 const row = {
@@ -44,6 +45,7 @@ export default function Tv() {
     <div>
       {items.length > 0 ? (
         <div id='tv' style={row}>
+          <Sorting />
           <Row gutter={[24, 24]} style={{ display: 'flex', flexWrap: 'wrap' }}>
             {items &&
               items.map((element) => (
