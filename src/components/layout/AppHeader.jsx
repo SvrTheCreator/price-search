@@ -8,9 +8,7 @@ const category = [
   {
     label: <Link to='/'></Link>,
     key: 'home',
-    icon: (
-      <img style={{ width: '25px' }} src='./public/imgs/ZAVOD.png' alt='' />
-    ),
+    icon: <img style={{ width: '25px' }} src='/imgs/ZAVOD.png' alt='' />,
   },
   {
     label: <Link to='/tv'>Телевизоры</Link>,
