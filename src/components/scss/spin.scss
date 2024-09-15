@@ -1,0 +1,20 @@
+/* App.css */
+
+// .loading-overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.8); /* Темный фон с прозрачностью */
+//   // background-color: #d6d6d6;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   z-index: 9999; /* Позиционирует Spin поверх основного контента */
+// }
+
+.ant-spin-dot {
+  /* Измените цвет индикатора загрузки */
+  color: #ff3318; /* Цвет индикатора */
+}
